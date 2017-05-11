@@ -1,0 +1,12 @@
+
+        
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+
+ribbon:
+    eureka:
+        enabled: true
+    serverListRefreshInterval: 3
+    
