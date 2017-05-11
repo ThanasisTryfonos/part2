@@ -1,0 +1,14 @@
+spring:
+    application:
+        name: eureka
+
+#This is the default port
+server:
+    port: 8761
+
+#Timeout management
+#https://github.com/spring-cloud/spring-cloud-netflix/issues/373
+
+#eureka.client.register-with-eureka=false
+#logging.level.com.netflix.eureka=ON
+#logging.level.com.netflix.discovery=OFF

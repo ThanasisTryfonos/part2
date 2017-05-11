@@ -1,0 +1,17 @@
+spring:
+    application:
+        name: turbine
+
+server:
+    port: 8080
+
+eureka:
+    client:
+        register-with-eureka: false
+
+turbine:
+    appConfig: service1,service2
+    clusterNameExpression: new String("default")
+    combineHostPort: true
+#    instanceInsertPort:
+#        default: false

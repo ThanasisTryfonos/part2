@@ -1,0 +1,29 @@
+spring:
+    application:
+        name: service2
+server:
+    port: 8082
+
+#spring.cloud.config.uri=http://localhost:8888  #DEFAULT
+#This parameter allows unauthorized acccess to /refresh   (with a POST assuming that spring-boot-starter-actuator is included) 
+management:
+    security:
+        enabled: false
+
+
+#feign.hystrix.enabled=true
+#eureka.client.fetch-registry=true
+#ribbon.eureka.enabled=true
+
+# Max number of retries on the same server (excluding the first try)
+#ribbon.maxAutoRetries = 2
+# Max number of next servers to retry (excluding the first server)
+#ribbon.MaxAutoRetriesNextServer = 3
+# Connect timeout used by Apache HttpClient
+#ribbon.ConnectTimeout=1000
+# Read timeout used by Apache HttpClient
+#ribbon.ReadTimeout=2000
+
+#Development
+#eureka.client.registryFetchIntervalSeconds=3
+#ribbon.serverListRefreshInterval=3

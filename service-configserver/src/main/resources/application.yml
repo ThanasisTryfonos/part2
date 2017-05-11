@@ -1,0 +1,18 @@
+spring:
+    application:
+        name: configserver
+        
+    cloud:
+        config:
+            server:
+                git:
+                    uri: /media/ubuntu/disk21/workspace/part2
+#                   uri: https://github.com/pgouvas/config1        
+#                   username: xxx
+#                   password: yyy
+                    searchPaths: config
+
+#This is the default Port. It should not be changed
+server:
+    port: 8888          
+    
