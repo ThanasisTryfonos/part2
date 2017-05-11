@@ -1,8 +1,10 @@
 spring:
     application:
         name: service1
+
 server:
     port: 8081
+
 
 #spring.cloud.config.uri=http://localhost:8888  #DEFAULT
 #This parameter allows unauthorized acccess to /refresh   (with a POST assuming that spring-boot-starter-actuator is included) 
