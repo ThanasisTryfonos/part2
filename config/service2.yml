@@ -6,7 +6,7 @@ feign:
 eureka:
     client:
         fetch-registry: true
-        register-with-eureka: false
+        register-with-eureka: true
         
 ribbon:
     eureka:

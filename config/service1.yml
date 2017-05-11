@@ -6,9 +6,14 @@ feign:
 eureka:
     client:
         fetch-registry: true
-        register-with-eureka: false
+        register-with-eureka: true
 
 ribbon:
     eureka:
         enabled: true
     serverListRefreshInterval: 3
+    
+    
+#Development
+#eureka.client.registryFetchIntervalSeconds=3
+#ribbon.serverListRefreshInterval=3

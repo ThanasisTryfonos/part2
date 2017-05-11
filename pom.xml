@@ -9,12 +9,13 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>transfer</module>        
+        <module>transfer</module>
         <module>service1</module>
         <module>service2</module>
         <module>service-eureka</module>
-        <module>service-turbine</module>  
-        <module>service-configserver</module>          
+        <module>service-turbine</module>
+        <module>service-configserver</module>
+        <module>service-zuulproxy</module>        
     </modules>
 
 </project>
