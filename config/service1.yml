@@ -1,4 +1,6 @@
 
+p1: 6
+
 feign:
     hystrix:
         enabled: true
