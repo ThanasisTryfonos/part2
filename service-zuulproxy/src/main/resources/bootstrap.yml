@@ -3,4 +3,16 @@ spring:
         name: zuulproxy
 
 server:
-    port: 80
+    port: 9999
+
+
+zuul:
+    routes:
+        route1:
+            serviceId: service1
+            path: /s1/**
+            stripPrefix: true
+        route2:
+            serviceId: service2
+            path: /s2/*
+            stripPrefix: true

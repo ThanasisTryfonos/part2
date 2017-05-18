@@ -1,5 +1,8 @@
 
-p1: 6
+spring:
+  profiles:
+    active: "dev"
+
 
 feign:
     hystrix:
@@ -15,6 +18,20 @@ ribbon:
         enabled: true
     serverListRefreshInterval: 3
     
+    
+---
+    
+spring:
+    profiles: dev
+
+p1: 6    
+    
+---
+    
+spring:
+    profiles: prod
+    
+p1: 7
     
 #Development
 #eureka.client.registryFetchIntervalSeconds=3
