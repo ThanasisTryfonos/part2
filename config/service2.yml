@@ -20,7 +20,7 @@ ribbon:
 kafka:
     bootstrap-servers: localhost:9092   
     topic:
-        test: test
+        topic1: topic1
 
 ---
     

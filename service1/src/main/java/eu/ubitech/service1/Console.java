@@ -17,6 +17,9 @@ public class Console {
     @Value("${p1:2}")
     private String p1;
     
+    @Value("${kafka.topic.topic1}")
+    private String topic1;    
+    
     private static final Logger logger = Logger.getLogger(Console.class.getName());
     
     @Autowired
@@ -34,7 +37,7 @@ public class Console {
     
     @RequestMapping("/test11/{msg}")   //Ping Tester
     public void test11(@PathVariable("msg") String msg) {
-        kafkasender.send("test", msg);
+        kafkasender.send(topic1, msg);
     }//EoM    
     
     
