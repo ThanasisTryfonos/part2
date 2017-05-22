@@ -3,7 +3,6 @@ package eu.ubitech.service2;
 import eu.ubitech.service2.consumer.Receiver;
 import java.util.HashMap;
 import java.util.Map;
-
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,6 +19,9 @@ public class ConfigKafka {
 
   @Value("${kafka.bootstrap-servers}")
   private String bootstrapServers;
+  
+  @Value("${kafka.group.group1}")
+  private String groupid;
 
   @Bean
   public Map<String, Object> consumerConfigs() {
@@ -29,7 +31,7 @@ public class ConfigKafka {
     props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
     props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
     // allows a pool of processes to divide the work of consuming and processing records
-    //props.put(ConsumerConfig.GROUP_ID_CONFIG, "helloworld");
+    props.put(ConsumerConfig.GROUP_ID_CONFIG, groupid );
 
     return props;
   }
