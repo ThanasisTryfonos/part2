@@ -12,3 +12,8 @@ ribbon:
     eureka:
         enabled: true
     serverListRefreshInterval: 3
+    
+ kafka:
+  bootstrap-servers: localhost:9092   
+  topic:
+      test: "test"
