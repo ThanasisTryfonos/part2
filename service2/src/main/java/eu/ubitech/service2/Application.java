@@ -17,6 +17,7 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableAutoConfiguration
 @ComponentScan({
     "eu.ubitech.service2"
+//    ,"eu.ubitech.service2.consumer"        
         //,"eu.ubitech.service2.client"    
 })
 public class Application {
