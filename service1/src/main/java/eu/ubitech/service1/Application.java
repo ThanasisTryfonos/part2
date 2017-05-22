@@ -18,7 +18,8 @@ import org.springframework.context.annotation.ComponentScan;
 @EnableAutoConfiguration            
 @ComponentScan({
     "eu.ubitech.service1"
-        //,"eu.ubitech.service1.client"
+    ,"eu.ubitech.service1.producer"
+    //,"eu.ubitech.service1.client"
 })
 public class Application {
     public static void main(String[] args) {

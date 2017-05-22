@@ -19,6 +19,10 @@ ribbon:
         enabled: true
     serverListRefreshInterval: 3
     
+kafka:
+  bootstrap-servers: localhost:9092
+  topic:
+    helloworld: helloworld.t
     
 ---
     

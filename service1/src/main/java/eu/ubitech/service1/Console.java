@@ -1,6 +1,7 @@
 package eu.ubitech.service1;
 
 import eu.ubitech.service1.client.PongService;
+import eu.ubitech.service1.producer.Sender;
 import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -28,6 +29,16 @@ public class Console {
         return ret1+"config_of_p1:"+p1;
     }//EoM
 
+    @Autowired
+    Sender kafkasender;
+    
+    @RequestMapping("/test11/{msg}")   //Ping Tester
+    public void test11(@PathVariable("msg") String msg) {
+        kafkasender.send("test", msg);
+    }//EoM    
+    
+    
+    
     @RequestMapping("/test1/{msg}") //Ping Tester
     public String test1(@PathVariable("msg") String msg) {
         String ret1 = pongservice.pong(msg).getMsg();
